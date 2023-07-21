@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alignement</title>
+    <style>
+        /* alignement are work on text  */
+        
+        .h {
+            border: 2px solid rgb(99, 94, 94);
+            border-radius: 12px;
+            background-color: aqua;
+            /* alignement tag */
+            text-align: center;
+            /*This 3 property are use for setting for margin auto*/
+            display: block;
+            width: 400px;
+            margin: 12px auto;
+        }
+        
+        h6 {
+            /*  display property */
+            /* inline use for not aquiring full space */
+            /* it is not use margin and pedding top or bottom */
+            /* not set size of tag */
+            display: inline;
+            /* inline block use for not aquiring full space */
+            /* it is use every thing like margin and pedding  */
+            /* set size of tag */
+            display: inline-block;
+            /* block use for aquiring full space */
+            /* it is use every thing like margin and pedding  */
+            /* set size of tag */
+            display: block;
+            /* dispaly and visibilite */
+            /* remove space and element */
+            /* display: none; */
+            /* remove element but space aquirening */
+            /* visibility: hidden; */
+        }
+        
+        #p1 {
+            /* for shifting to right side */
+            float: right;
+            height: 123px;
+        }
+        
+        #p2 {
+            /* for shifting to left side */
+            float: left;
+            height: 123px;
+        }
+        
+        #p3 {
+            float: left;
+            height: 123px;
+        }
+        
+        #p4 {
+            /* when overload the float then use clear */
+            /* clearing right side */
+            clear: right;
+            /* clearing left side */
+            clear: left;
+            /* clearing both side */
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="h" id="p1">Lorem aadipisicing.</h1>
+    <h2 class="h" id="p2">Lorem amet consectetur adipisicing.</h2>
+    <h3 class="h" id="p3">Lorem amet consectetur adipisicing.</h3>
+    <h4 class="h" id="p4">Lorem amet consectetur adipisicing.</h4>
+    <h5 class="h" id="p5">Lorem amet consectetur adipisicing.</h5>
+</body>
+
+</html>

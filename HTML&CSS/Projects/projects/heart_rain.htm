@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .heart {
+            font-size: 30px;
+            position: fixed;
+            top: -5vh;
+            /* transform: translateX(0); */
+            /* animation: fail 3s ease-in; */
+            animation: fail 3s ease-in-out;
+            /* animation: fail 3s linear; */
+        }
+
+        @keyframes fail {
+            to {
+                transform: translateY(105vh);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function name() {
+            let div = document.createElement('div');
+            div.classList.add('heart');
+            div.style.left = Math.random() * 100 + '%'
+            div.style.animationDuration = Math.random() * 2 + 2 + 's'
+            let h1='💜'
+            let h2='💓'
+            let h3='💌'
+            let h4='💞'
+            let ran=  Math.floor(Math.random()*3)
+            console.log('avinash sharma')
+            // document.body.innerText='💓'
+            if (ran==0) {
+                div.innerText=`${h1}`
+            }
+            else if (ran==1) {
+                div.innerText=`${h2}`
+            }
+            else if (ran==2) {
+                div.innerText=`${h3}`
+            }
+            else{
+                div.innerText=`${h3}`
+            }
+            document.body.appendChild(div)
+            setTimeout(() => {
+                div.remove()
+            },3000);
+        }
+        setInterval(name, 500);
+    </script>
+</body>
+
+</html>

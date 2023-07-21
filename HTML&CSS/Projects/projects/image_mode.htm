@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        #menu{
+            box-shadow: 3px 12px 5px red;
+            overflow: hidden;
+            height: 300px;
+            width: 300px;
+        }
+        #sub-menu{
+            display: flex;
+            transition: transform 0.5s linear;
+            /* transform: translateX(0); */
+        }
+        .img{
+            /* object-fit: cover; */
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menu">
+        <div id="sub-menu">
+            <img class="img" src="image/3.jpg" alt="">
+            <img class="img" src="image/3-1.png" alt="">
+            <img class="img" src="image/3.jpg" alt="">
+            <img class="img" src="image/4.jpg" alt="">
+        </div>
+    </div>
+    <script>
+        let img=document.getElementById('sub-menu')
+        let imgs=document.querySelectorAll('#sub-menu img')
+        let i=0;
+        function run() {
+            i++;
+            if (i>imgs.length) {
+                i=0;
+            }
+            // transform: translateY();
+            img.style.transform=`translateX(${-i * 300}px)`;
+            setTimeout(run,2000);
+        }
+        setInterval( run,2000)
+    </script>
+</body>
+
+</html>

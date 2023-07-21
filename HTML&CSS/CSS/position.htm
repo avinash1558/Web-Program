@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSITION</title>
+    <style>
+        ul {
+            margin: 12px;
+            list-style: none;
+            display: flex;
+        }
+        
+        .l {
+            height: 63px;
+            width: 63px;
+            border: 2px solid red;
+            margin: 12px;
+        }
+        
+        #l1 {
+            /* not follow the parent  */
+            position: absolute;
+            right: 123px;
+            top: 45px;
+            /* follow the parent  */
+            /* position: relative;
+            left: 425px;
+            top: 45px; */
+            /* fixed the box and it is not chnage when scroll*/
+            /* position: sticky;
+            left: 425px;
+            top: 45px; */
+            /* fixed the box and it is not chnage when scroll*/
+            /* position: fixed;
+            left: 425px;
+            top: 45px; */
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="l" id="l1">sit</li>
+        <li class="l" id="l2"> Lorem.</li>
+        <li class="l" id="l3">dolor.</li>
+    </ul>
+    <footer>
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum est labore id.</h1>
+    </footer>
+    <table>
+        <form action="">
+            <tr>
+                <td>name</td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>name lorem 444</td>
+                <td><input type="text"></td>
+            </tr>
+        </form>
+    </table>
+</body>
+
+</html>

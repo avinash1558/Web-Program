@@ -1,0 +1,124 @@
+first config  s1
+1) git config --global user.name <name>
+-git config --global user.name
+
+2) git config --global user.email <email>
+-git config --global user.email
+
+
+git initialize  s2
+- git init
+
+
+checking status for file
+- git status
+
+
+add all file to modified stage
+- git add <filename>
+or
+for all file
+- git add -A
+
+
+commit all chnages  
+- git commit -m "message"
+
+when you not want add stage than use  s3
+- git commit -a -m "message"
+
+
+go to prev status then use 
+- git checkout <filename>
+or
+for all file
+- git checkout -f
+
+
+want lag of commit than
+- git log
+
+want lag for specefice position of commit than
+- git log -p -<position>
+ex git log -p -3
+
+
+get difference of files
+- git diff
+
+compare to diff and staged
+- git diff --staged
+
+
+deleting file in to branches
+- git rm --cached <filename>
+
+deleting file 
+- git rm <filename>
+
+
+get file list in folder
+- ls
+- ls -lart
+
+
+create new file 
+- touch <filename>
+
+
+for ignoring same file and folder
+1)create one file name .gitignore
+2)write 
+/mylog.log   - it is ignore all mylog.log file
+*.log        - it is ignore all .log file
+log/         - it is ignore all log folder
+/log         - it is ignore all log file but not in folder log file
+
+
+create branch 
+- git branch <name>
+- git checkout <name>
+or 
+- git checkout -b <name>
+
+
+and merge the branch
+- git merge <name>
+
+
+
+for remote and read write by pc
+1) goto setting and click to  "ssh and gpg keys"   - hub
+2) Check to "generating SSH keys"   -hub
+3) Check to "Generating a new SSH key and adding it to the ssh-agent"  -hub
+4) copy this " ssh-keygen -t ed25519 -C "your_email@example.com" "   -hub 
+- ssh-keygen -t ed25519 -C "<enter email>"
+ -press enter enter
+5) copy this " eval "$(ssh-agent -s)" "  -hub
+- eval "$(ssh-agent -s)"
+and 
+copy this " $ ssh-add ~/.ssh/id_ed25519 "
+- ssh-add ~/.ssh/id_ed25519
+6) Check to "Adding a new SSH key to your GitHub account."
+7) copy clipboard path "~/.ssh/id_ed25519.pub" and decreapt 
+- cat ~/.ssh/id_ed25519.pub
+and copy the path and create new ssh key and add those path
+8 and final) set to http to ssh
+and copy ssh path and add to 
+- git remote set-url origin git@github.com:avinash1558/pythoncode.git
+
+
+check remote and version
+- git remote
+and 
+- git remote -v
+
+
+push the file into git
+- git push -u origin master
+
+add all file of branch
+1)go to branch
+- git checkout <name>
+2)push the file into git
+- git push -u origin <name>

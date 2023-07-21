@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert, Prompt ,Confirm ,Video ,audio</title>
+</head>
+
+<body>
+    <script>
+        // it is give alert message
+        alert("it is hormful");
+
+        // it is give option for message and input
+        prompt("what is you name ");
+        // give defualt value in string type
+        //prompt("comment",defualt);
+        prompt("what is you name ", "avinash");
+        // asign to variable 
+        let pro = prompt("what is you name ");
+        console.log(pro);
+
+        // create confirm maintion dialog box 
+        confirm("you are ready");
+        // // asign to variable 
+        let a = confirm("you are ready");
+        console.log(a);
+    </script>
+    <!-- is normal video and audio with controls -->
+    <video width="400" height="400" controls>
+        <source src="./project1/Abstract_Base_Class_&_Pure_Virtual_Functions_in_C_____C___Tutorials_for_Begi.mp4" type="video/mp4">
+    </video>
+    <audio width="400" height="400" controls>
+        <source src="./project1/Abstract_Base_Class_&_Pure_Virtual_Functions_in_C_____C___Tutorials_for_Begi.mp4" type="audio/mp3">
+    </audio>
+
+    <!-- is normal video audio and controls autoplay-->
+    <video width="400" height="400" controls autoplay>
+        <source src="./project1/Abstract_Base_Class_&_Pure_Virtual_Functions_in_C_____C___Tutorials_for_Begi.mp4" type="video/mp4">
+    </video>
+    <audio width="400" height="400" controls autoplay>
+        <source src="./project1/Abstract_Base_Class_&_Pure_Virtual_Functions_in_C_____C___Tutorials_for_Begi.mp4" type="audio/mp3">
+    </audio>
+    <!-- is normal video audio and controls autoplay mute-->
+    <video width="400" height="400" controls autoplay muted>
+        <source src="./project1/Abstract_Base_Class_&_Pure_Virtual_Functions_in_C_____C___Tutorials_for_Begi.mp4" type="video/mp4">
+    </video>
+    <audio width="400" height="400" controls autoplay muted>
+        <source src="./project1/Abstract_Base_Class_&_Pure_Virtual_Functions_in_C_____C___Tutorials_for_Begi.mp4" type="audio/mp3">
+    </audio>
+    <!-- youtube video control -->
+    <iframe width="400" height="400" src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0"></iframe>
+    <!-- youtube video control autoplay mute -->
+    <iframe width="400" height="400" src="https://www.youtube.com/embed/tgbNymZ7vqY?mute=1" frameborder="4"></iframe>
+
+</body>
+
+</html>

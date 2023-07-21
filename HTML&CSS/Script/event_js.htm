@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Java Script</title>
+</head>
+
+<body>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus non, quasi obcaecati nemo nam harum necessitatibus officiis laboriosam nulla, perspiciatis voluptatibus labore numquam.</p>
+    <button id="c" onclick="sow()">enter you name</button>
+    <script>
+        // function sow(){
+        // let a=document.getElementById("c");
+        // let b=document.getElementById("para");
+        //it is check b in style in display
+        // if(b.style.display !='none')
+        // {
+        //     b.style.display='none';
+        //     b.innerHTML="<h1>avinash</h1>"
+        // }
+        // else{
+        //     b.style.display='block';
+        //}
+
+        // }
+        // let b = document.getElementById("para");
+        // b.addEventListener("mouseover",
+        // function saw() {
+        //     b.style.display = 'none';
+        // });
+        // // let b=document.getElementById("para");
+        // b.addEventListener("mouseout", function saw() {
+        //     b.style.display = 'block';
+        // });
+        let b = document.getElementById("para");
+        let c = document.getElementById("c");
+        console.log(c)
+            //when click th word then call
+            // b.addEventListener("mousedown",function avinash() {
+            //     alert("avinash is good");
+            // });
+            //when click th word then call
+            // b.addEventListener("mouseup",function avinash() {
+            //     alert("avinash is good");
+            // });
+            //when move the word then call
+            // b.addEventListener("mousemove",function avinash() {
+            //     alert("avinash is good");
+            // });
+            // b.addEventListener("pointermove",function avinash() {
+            //     alert("avinash is good");
+            // });
+            //when outside of the word then call
+        b.addEventListener("mouseleave", () => {
+            alert("avinash is good");
+        });
+    </script>
+</body>
+
+</html>

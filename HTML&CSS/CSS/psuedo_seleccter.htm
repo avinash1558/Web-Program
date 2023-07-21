@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>psuedo selector</title>
+    <style>
+        .h {
+            border: 2px solid red;
+            border-radius: 12px;
+            background-color: chocolate;
+        }
+        /* mouse over to the content */
+        
+        .h:hover {
+            border: 2px solid red;
+            border-radius: 23px;
+            background-color: rgb(63, 30, 210);
+            /* display none are use for hiden */
+            /* display: none; */
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        /* when visited */
+        
+        a:visited {
+            border: 2px solid rgb(7, 4, 4);
+            border-radius: 23px;
+            background-color: rgb(72, 210, 30);
+            text-decoration: none;
+            color: black;
+        }
+        
+        a:active {
+            border: 2px solid rgb(28, 114, 28);
+            border-radius: 23px;
+            background-color: rgb(210, 30, 150);
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="h" id="p1">Lorem ipsum dolor sit amet.</h1>
+    <h2 class="h" id="p2">Lorem ipsum dolor sit amet.</h2>
+    <h3 class="h" id="p3">Lorem ipsum dolor sit amet.</h3>
+    <a class="h" href="https://amazon.com" target="_self">Lorem, ipsum.</a>
+
+</body>
+
+</html>

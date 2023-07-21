@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shadow</title>
+    <style>
+        .h{
+            height: 63px;
+            width:263px ;
+            text-align: center;
+            margin: 40px 23px;
+            border: 2px solid rgb(211, 43, 13);
+            border-radius: 16px;
+            background-color: rgb(54, 15, 194);
+        }
+        #h1{
+            /* box-shadow: X  Y dim  spreat color; */
+            /* outside of box */
+            /* down side */
+            /* box-shadow: 12px 12px 12px 23px green; */
+            /* box-shadow: 12px 12px 1px green; */
+            /* inside of box */
+            /* box-shadow:inset -2px -2px 2px 3px green; */
+            /* up side */
+            /* box-shadow: -12px -12px 12px 13px green; */
+            /* box-shadow: -12px -12px 1px green; */
+            /* inside of box */
+            box-shadow:inset 2px 2px 2px 3px green;
+
+        }
+        #h2{
+            /* text-shadow: X  Y color; */
+            /* outside of text */
+            /* down side */
+            /* text-shadow: 2px 2px green; */
+            text-shadow: -2px -2px  green;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="h" id="h1">Lorem ipsum dolor sit amet.</div>
+    <div class="h" id="h2">Lorem ipsum dolor sit amet.</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen and (max-width:500px)" href="media.css">
+    <title>media queries</title>
+    <style>
+        .h {
+            font: 720px;
+            text-align: center;
+            border: 2px solid tomato;
+            background-color: burlywood;
+            color: white;
+            /* display: none; */
+        }
+        /* @media (max-width:500px) {
+            #h1 {
+                font: 720px;
+                text-align: center;
+                border: 2px solid rgb(71, 255, 102);
+                background-color: rgb(155, 222, 135);
+                color: rgb(73, 15, 112);
+                display: block;
+            }
+        } */
+        /* @media(max-width:500px) {
+            #h1 {
+                font: 720px;
+                text-align: center;
+                border: 2px solid rgb(71, 255, 102);
+                background-color: rgb(155, 222, 135);
+                color: rgb(73, 15, 112);
+                display: block;
+            }
+        } */
+        
+        @media(max-width:700px) and (min-width:500px) {
+            #h3 {
+                font: 720px;
+                text-align: center;
+                border: 2px solid rgb(105, 71, 255);
+                background-color: rgb(222, 155, 135);
+                color: rgb(105, 11, 66);
+                display: block;
+            }
+        }
+        
+        @media (min-width:700px) {
+            #h2 {
+                font: 720px;
+                text-align: center;
+                border: 2px solid rgb(28, 219, 44);
+                background-color: rgb(219, 223, 9);
+                color: rgb(16, 115, 133);
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="h" id="h1">
+        <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, ea.</h1>
+    </div>
+    <div class="h" id="h2">Lorem ipsum dolor sit amet consectetur.</div>
+    <div class="h" id="h3">Lorem, ipsum dolor.</div>
+</body>
+
+</html>

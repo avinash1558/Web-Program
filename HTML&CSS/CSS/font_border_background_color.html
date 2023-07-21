@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font ,border ,background-color ,color</title>
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Lobster?query=b">
+    <style>
+        /* font size and family */
+        
+        * {
+            /* it is for all tag  */
+            margin: 0%;
+            padding: 0%;
+        }
+        
+        .h {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* give space in next line and prev line */
+            line-height: 23px;
+            /* border  */
+            /* for all side */
+            /* setting  border need 3 thing*/
+            /* border-width: 2px;
+            border-style: solid;
+            border-color: blue; */
+            /* combine 3 in 1 */
+            /* border: 2px solid blue; */
+            /* one side border */
+            border-left: 2px solid red;
+            border-right: 2px solid rgb(68, 0, 255);
+            border-top: 2px solid rgb(255, 0, 149);
+            border-bottom: 2px solid rgb(51, 255, 0);
+            /* radius in border */
+            /* for all side */
+            /* border-radius: 12px; */
+            /* for particular corner */
+            border-top-left-radius: 23px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 1px;
+            border-bottom-left-radius: 45px;
+            /* it is for maintain every thing in side a box with padding and margin*/
+            /* box-sizing: border-box; */
+            /* it is for maintain data in side a box without padding and margin*/
+            /* box-sizing: content-box; */
+            background-color: rgb(107, 207, 116);
+            height: 43px;
+            /* height for top to bottom*/
+            width: 100%;
+            /* width for left to right */
+        }
+        
+        #p6 {
+            border: none;
+            font-size: 12px;
+        }
+        
+        h3 {
+            font-weight: bold;
+        }
+        
+        h4 {
+            font-style: italic;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            /* padding are use for space inside box */
+            /* padding: top right bottom left; */
+            /*  padding: 5px 10px 13px 12px ; */
+            /* padding-left: 12px;
+            padding-right: 10px;
+            padding-top: 5px;
+            padding-bottom: 13px; */
+            /* all have same */
+            padding: 12px;
+            /* two side padding; */
+            /* padding: X(top&bottom) Y(left&right); */
+            /* padding: 12px 23px; */
+            /* margin are use for space outside box */
+            /* margin: top right bottom left; */
+            /*  margin: 5px 10px 13px 12px ; */
+            /* margin-left: 12px;
+            margin-right: 10px;
+            margin-top: 5px;
+            margin-bottom: 13px; */
+            /* all have same */
+            margin: 12px;
+            /* two side margin; */
+            /* margin: X(top&bottom) Y(left&right); */
+            /* margin: 12px 23px; */
+        }
+        
+        .avi {
+            height: 333px;
+            background-image: url('./project1/1st.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            /* change color of image */
+            filter: invert(100%);
+            /* z-index: 2; */
+            /* opacity: 0.1; */
+        }
+        
+        .avi:hover {
+            height: 333px;
+            background-image: url('./project1/1st.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            /* change color of image */
+            filter: invert(100%);
+            /* z-index: 2; */
+            opacity: 0.1;
+            /* visibility: hidden; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="h" id="p1">Lorem ipsum dolor sit amet.</h1>
+    <h2 class="h" id="p2">Lorem ipsum dolor sit amet.</h2>
+    <h3 class="h" id="p3">Lorem ipsum dolor sit amet.</h3>
+    <h4 class="h" id="p4">Lorem ipsum dolor sit amet.</h4>
+    <h5 class="h" id="p5">Lorem ipsum dolor sit amet.</h5>
+    <h6 class="h" id="p6">Lorem ipsum dolor sit amet.</h6>
+    <div class="avi">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem corporis quis laboriosam est excepturi, minima, sapiente nemo accusamus officiis fugiat obcaecati, iusto magnam ullam eius? Quam maxime maiores alias eligendi!</div>
+</body>
+
+</html>

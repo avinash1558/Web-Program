@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+    <title>poject1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #menu {
+            font-family: 'Baloo Thambi 2', cursive;
+            background-color: black;
+            width: 100%;
+            height: 60px;
+            border-radius: 12px;
+            color: rgb(250, 242, 242);
+            display: flex;
+            align-items: center;
+        }
+
+        #home {
+            margin: 0px 70px;
+            font-size: 40px;
+        }
+
+        #search {
+            margin-left: 594px;
+            height: 46px;
+            font-size: 25px;
+            width: 250px;
+            border-radius: 6px;
+        }
+
+        #search_bt {
+            font-size: 20px;
+            height: 44px;
+            border-radius: 6px;
+            border: none;
+            width: 80px;
+            margin: 0px 6px;
+            background-color: #a79a9a;
+        }
+
+        #section {
+            font-family: 'Limelight', cursive;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #section1 {
+            width: 100%;
+
+            margin: 12px 0px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #section2 {
+            width: 100%;
+        }
+
+        .sub_section {
+            margin: 12px auto;
+            height: 350px;
+            width: 650px;
+            font-size: 25px;
+            padding: 15px 12px;
+            border-radius: 12px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #welcome1 {
+            text-align: center;
+            font-size: 50px;
+
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        #addtxt {
+            height: 160px;
+            font-size: 25px;
+            width: 620px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+        #welcome2 {
+            font-size: 50px;
+            text-align: center;
+
+        }
+        #addtitle{
+            border-radius:6px;
+            height: 60px;
+            font-size: 25px;
+            }
+        #addbtn {
+            width: 143px;
+            font-size: 25px;
+            background-color: blue;
+            border: none;
+            height: 35px;
+            border-radius: 9px;
+        }
+
+        #nodes {
+            margin: 20px 100px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .notecard {
+            margin: 7px;
+            border-radius: 8px;
+            border: 2px solid rgb(5, 5, 5);
+        
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .card-text {
+            margin: 7px 12px;
+            font-size: 20px;
+        }
+
+        .card-title {
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .btn {
+            border: none;
+            background-color: royalblue;
+            font-size: 20px;
+            width: 123px;
+            height: 30px;
+            margin: 3px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menu">
+        <h1 id="home"> Magic Nodes</h1>
+        <input id="search" type="text" name="search" placeholder="search now...">
+        <button id='search_bt' class="search_bt">search</button>
+    </div>
+    <div id='section'>
+        <div id="section1">
+            <hr>
+            <h1 id="welcome1">Welcome To Magic Nodes</h1>
+            <hr>
+            <div class="sub_section">
+                <p>Add title</p>
+                <textarea name="node" id="addtitle" class="input" cols="30" rows="2"></textarea>
+                <p>Add text</p>
+                <textarea name="node" id="addtxt" class="input" cols="30" rows="10"></textarea>
+                <button class="input_save" id="addbtn">Save now</button>
+            </div>
+        </div>
+        <div id="section2">
+            <hr>
+            <h1 id="welcome2">Magic Nodes</h1>
+            <hr>
+        </div>
+        <div id="nodes" class="nodes"></div>
+    </div>
+
+    <script src="javascript.js"></script>
+
+</body>
+
+</html>

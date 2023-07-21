@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .menu-bar {
+            background-color: green;
+            text-align: center;
+        }
+        
+        .menu-bar ul {
+            display: flex;
+            list-style: none;
+            color: #fff;
+        }
+        
+        .menu-bar ul li {
+            width: 120px;
+            margin: 15px;
+            padding: 15px;
+        }
+        
+        .menu-bar ul li a {
+            text-decoration: #fff;
+            color: white;
+        }
+        
+        .menu-bar ul li:hover,
+        .active {
+            background-color: aqua;
+            border-radius: 3px;
+        }
+        
+        .sub-menu-1 {
+            display: none;
+        }
+        
+        .menu-bar ul li:hover .sub-menu-1 {
+            display: block;
+            position: absolute;
+            background-color: aquamarine;
+            margin-left: -15px;
+            margin-top: 15px;
+        }
+        
+        .menu-bar ul li:hover .sub-menu-1 ul {
+            display: block;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-bar">
+        <ul>
+            <li class="active"><a href=""> loren1</a></li>
+            <li><a href=""> loren1</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href=""> Lorem.</a></li>
+                        <li><a href=""> Lorem.</a></li>
+                        <li><a href=""> Lorem.</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href=""> loren1</a></li>
+            <li><a href=""> loren1</a></li>
+            <li><a href=""> loren1</a></li>
+            <li><a href=""> loren1</a></li>
+            <li><a href=""> loren1</a></li>
+            <li><a href=""> loren1</a></li>
+        </ul>
+    </div>
+    <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore quisquam minima ab perferendis facilis dignissimos corrupti ea esse sapiente eius, doloribus facere, corporis ex, earum voluptatem vitae placeat? Consequatur, assumenda.</h1>
+</body>
+
+</html>

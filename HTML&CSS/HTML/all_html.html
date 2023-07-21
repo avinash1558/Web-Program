@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Html tag </title>
+    <!-- linking CSS and JAVASCRIPT in html  -->
+    <link rel="stylesheet" href="abc.css">
+    <script src="abc.js"></script>
+    <style>
+        /* it is internal css */
+        
+        table,
+        th,
+        td {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- h tag h1 to h6 -->
+    <h1>it is h1 tag</h1>
+    <h2>it is h2 tag</h2>
+    <h3>it is h3 tag</h3>
+    <h4>it is h4 tag</h4>
+    <h5>it is h5 tag</h5>
+    <h6>it is h6 tag</h6>
+
+    <!-- paragraph tag      & it is comment -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium sapiente id molestiae tempora consequuntur ducimus odit quos culpa! Aut, enim minus! Sunt debitis expedita explicabo voluptates vitae nesciunt itaque ex distinctio, eveniet sapiente
+        assumenda?
+    </p>
+
+    <!-- formatting tag -->
+
+    <!-- black display -->
+    <h1>it is h1 tag</h1>
+    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus culpa esse asperiores?</div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium sapiente id molestiae tempora consequuntur
+
+        <hr>
+        <b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident tenetur ab aspernatur.</b>
+        <br>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, illum similique? Corrupti.</div>
+        <!-- inline display -->
+        <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nulla iusto quos!</strong> <br>
+        <i>Lorem ipsum dolor sit amet consectetur.</i><br>
+        <em>Lorem ipsum dolor sit amet consectetur.</em><br>
+        <ins>Lorem ipsum dolor sit amet consectetur.</ins><br>
+        <u>Lorem ipsum dolor sit amet consectetur.</u><br> Lorem ipsum dolor <sup>Lorem, ipsum dolor.</sup> sit amet consectetur.<br> Lorem ipsum dolor <sub>Lorem, ipsum dolor.</sub> sit amet consectetur.<br>
+        <small>Lorem ipsum dolor sit amet consectetur <del>Lorem, ipsum.</del> adipisicing elit. Incidunt laboriosam
+        dolorum quaerat!</small><br>
+
+        <!-- tag and attribute -->
+        <!-- tag-> h1 ,p ,a ,tr,div.....
+    attribute->href ,src ,type ,rel..... -->
+        <header>Lorem ipsum dolor &nbsp&nbsp&nbsp sit amet consectetur.</header>
+
+        <!-- image and button and link -->
+        <!-- target -->
+        <!-- open in new window  -->
+        <a href="https://amazon.com" target="_blank">click</a>
+        <!-- open in same window -->
+        <a href="https://amazon.com" target="_self">click</a>
+        <a href="https://amazon.com"> <img src="./project1/1st.png" alt="avinash ">
+        </a>
+        <button>avinash</button><br>
+        <img src="./project1/1st.png" alt="avinash ">
+        <!-- ./ it is 1 time back 
+    ../ it is 2 time back -->
+
+        <!-- Table and form and list -->
+        <table cellpadding="10" cellspacing="0">
+            <!-- cellpadding->it is use for word padding
+    cellspacing->it is use for adding box -->
+            <tr>
+                <th>no.</th>
+                <th>name</th>
+                <th>last name</th>
+                <th>id</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td colspan="2">avinash sharma</td>
+                <!-- adding two col  -->
+                <td rowspan="2">2020</td>
+                <!-- adding two row  -->
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>rohit</td>
+                <td>sharma</td>
+            </tr>
+        </table>
+
+        <form action="">
+            <label for="text">text:<input type="text" name="text" min="5" maxlength="20" id="text"></label>
+            <label for="pass">
+            password:<input type="password" id="pass" placeholder="password" name="password">
+        </label>
+            <br> email:
+            <input type="email" name="email"><br> Number:
+            <input type="Number" name="Number"><br> data:
+            <input type="date" name="date"><br> range:
+            <input type="range" name="range" step="2"><br> gender:
+            <input type="radio" name="gender">male<input type="radio" name="gender">female<br>
+            <input type="checkbox" name="check">Lorem ipsum dolor sit amet consectetur. <br> paragraph:
+            <textarea name="text" cols="4" rows="2"></textarea><br>
+            <input type="submit" value="submit now"><input type="reset" value="reset now">
+            <select name="name">
+            <option value="avinash">avi</option>
+            <option value="avin">nash</option>
+        </select>
+            <select name="name">
+            <optgroup label="name"></optgroup>
+            <option value="avinash">avi</option>
+            <option value="avin" selected>nash</option>
+            <optgroup label="name"></optgroup>
+            <option value="avinash">avi</option>
+            <option value="avin">nash</option>
+        </select>
+        </form>
+
+        <ul type="none">
+            <li>avinash</li>
+            <li>black</li>
+            <li>red</li>
+        </ul>
+        <ul type="square">
+            <li>avinash</li>
+            <li>black</li>
+            <li>red</li>
+            </ol>
+            <ol type="none">
+                <li>avinash</li>
+                <li>black</li>
+                <li>red</li>
+                <ul type="square">
+                    <li>avinash</li>
+                    <li>black</li>
+                    <li>red</li>
+            </ol>
+            <ol type="I">
+                <li>avinash</li>
+                <li>black</li>
+                <li>red</li>
+            </ol>
+
+            <dl>
+                <dt>avinash</dt>
+                <dd>it is good</dd>
+                <dt>avih</dt>
+                <dd>it is bad</dd>
+                <ol type="I">
+                    <li>avinash</li>
+                    <li>black</li>
+                    <li>red</li>
+                </ol>
+            </dl>
+
+            <!-- semantic element -->
+            <article>Lorem ipsum dolor sit amet consectetur.</article>
+            <aside>Lorem ipsum dolor sit amet consectetur.</aside>
+            <footer>Lorem ipsum dolor sit amet consectetur.</footer>
+            <details>Lorem ipsum dolor sit amet consectetur.</details>
+            <details>
+                <summary>Lorem ipsum dolor sit amet consectetur.</summary>Lorem ipsum dolor sit amet consectetur.</details>
+            <header>Lorem ipsum dolor sit amet consectetur.</header>
+
+            <!-- ids and class -->
+            <!-- .avi{
+
+    }
+    #an{
+
+    } -->
+            <h3 class="avi">Lorem ipsum dolor sit.</h3>
+            <h3 id="an">Lorem ipsum dolor sit.</h3>
+
+
+
+</body>
+
+</html>

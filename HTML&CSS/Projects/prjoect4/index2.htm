@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <button id='cloc' >Set</button>
+    <input type="text"placeholder="day/hour/minute" id="input">
+    <script>
+        // console.log(Number('123'))
+        let a=new Date
+        // console.log(a.get)
+        let set=document.getElementById('cloc')
+        let input=document.getElementById('input')
+        set.addEventListener('click',()=>{
+            console.log('.set')
+            
+        })
+        let str=input.value
+        console.log(str)
+            var d=str.split('/')[0]
+            var h=str.split('/')[1]
+            var m=str.split('/')[2]
+        if (a.getDay()===Number(d)) {
+            console.log('avinash')
+            if (a.getHours()===h) {
+                if (a.getMinutes()===m) {
+                    console.log('set')
+                }
+            }
+        }
+        let div=document.createElement('div')
+        div.innerText=`Today date => ${a.getDay()}:${a.getHours()}:${a.getMinutes()}`
+        document.body.appendChild(div)
+    </script>
+</body>
+</html>

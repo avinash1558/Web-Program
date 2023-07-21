@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function in Java script</title>
+</head>
+
+<body>
+    <script>
+        // function name() {
+        //     document.write("is good");
+        // }
+        // function name(a) {
+        //     document.write(a+" "+"is good");
+        // }
+        // function name(a ,b="very") {
+        //     document.write(a+" "+b+" "+"is good"+"<br>");
+        //     return 12;
+        // }
+        // var str="avinash";
+        // var s="not";
+        // name();
+        // name(str);
+        //name("rahul");
+        // name(str);
+        //call by value
+        // let a=name(str,s);
+        // document.write(a);
+
+        // //array
+        // let arr=[1,1,122,33,22,33,22];
+        // //sort the array
+        // // let a=arr.sort();
+        // //remove in last place and add in last place
+        // arr.pop();
+        // arr.push(1,2000);
+        // //remove in first place and add in first place
+        // arr.shift();
+        // arr.unshift(12);
+        // arr[3]=1233;
+        // // arr.pop();
+        // for(let a=0;a<arr.length;a++){
+        // document.write(arr[a]+",");
+        // }
+        // document.write(a[3]);
+
+        //object 
+        let a = {
+            name: "avinash",
+            salary: 12222,
+        }
+        let c = [12, 121];
+        //it is for of
+        for (name of c) {
+            console.log(name.name + "<br>");
+        }
+        for (key in a) {
+            console.log(`the name of topper is ${key} and mark ${a[key]} <br>`);
+        }
+        c.forEach((element, e) => {
+            console.log(e + " ,");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        
+        div {
+            background-color: pink;
+            height: 50px;
+            font-size: 40px;
+            font-style: italic;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <audio id="1st" src="../wing.wav" type="audio/mp3"></audio>
+    <div>
+    </div>
+    <script>
+        let text1 = 'avinash sharma';
+        let text2 = 'akanksha sharma';
+        let i = 0;
+        let t
+
+        function name() {
+            // let t=text1.toLocaleUpperCase()
+            document.getElementById('1st').play()
+
+            if (t != text2) {
+                t = text1
+                    // console.log('i am 2')
+            } else {
+                t = text2
+                    // console.log('i am 3')
+            }
+            let div = document.querySelector('div')
+                // document.body.innerText=text.slice(0,i);
+            if (t == text1) {
+                if (i > text1.length) {
+                    i = 0
+                    t = text2
+                        // console.log('i am')
+                } else {
+
+                    div.innerText = `${t.slice(0, i)}|`;
+                }
+            }
+            if (t == text2) {
+                if (i > text2.length) {
+                    i = 0
+                    t = text1
+                } else {
+                    div.innerText = `${t.slice(0, i)}|`;
+                }
+            }
+            i++;
+
+        }
+        setInterval(() => {
+            document.getElementById('1st').play()
+            name();
+        }, 300);
+    </script>
+</body>
+
+</html>

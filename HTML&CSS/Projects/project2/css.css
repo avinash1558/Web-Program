@@ -1,0 +1,171 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #menu {
+            font-family: 'Baloo Thambi 2', cursive;
+            background-color: black;
+            width: 100%;
+            height: 60px;
+            border-radius: 12px;
+            color: rgb(250, 242, 242);
+            display: flex;
+            align-items: center;
+        }
+
+        #home {
+            margin: 0px 70px;
+            font-size: 40px;
+        }
+
+        #search {
+            margin-left: 594px;
+            height: 46px;
+            font-size: 25px;
+            width: 250px;
+            border-radius: 6px;
+        }
+
+        #search_bt {
+            font-size: 20px;
+            height: 44px;
+            border-radius: 6px;
+            border: none;
+            width: 80px;
+            margin: 0px 6px;
+            background-color: #a79a9a;
+        }
+
+        #section {
+            font-family: 'Limelight', cursive;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #section1 {
+            width: 100%;
+            margin: 12px 0px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #section2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .sub_section {
+            margin: 12px auto;
+            height: 350px;
+            width: 650px;
+            font-size: 25px;
+            padding: 15px 12px;
+            border-radius: 12px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #welcome1 {
+            text-align: center;
+            font-size: 50px;
+
+        }
+
+        textarea {
+            resize: none;
+            height: 45px;
+            width: 616px;
+            font-size: 25px;
+        }
+
+        #addAuthor {
+            font-size: 25px;
+            border-radius: 6px;
+        }
+
+        #welcome2 {
+            font-size: 50px;
+            text-align: center;
+
+        }
+
+        #addbook {
+            border-radius: 6px;
+            font-size: 25px;
+        }
+
+        #addbtn {
+            width: 143px;
+            font-size: 25px;
+            background-color: blue;
+            border: none;
+            height: 35px;
+            border-radius: 9px;
+        }
+
+        .TypeTd {
+            position: relative;
+            left: 55px;
+        }
+        .th {
+            width: 300px;
+        }
+
+        .th1 {
+            width: 170px;
+        }
+        .th2 {
+            width:800px;
+        }
+        .th3 {
+            width: 403px;
+        }
+        .th4 {
+            width: 170px;
+        }
+        .th5 {
+            width: 100px;
+        }
+        .td1 {
+            width: 224px;
+        }
+        .td2 {
+            width:815px;
+        }
+        .td3 {
+            width: 416px;
+        }
+        .td4 {
+            width: 146px;
+        }
+        .td5 {
+            width: 150px;
+        }
+        .tbody{
+            display: block;
+            text-align: center;
+            width: 1000px;
+            margin: auto;
+        }
+        .table2{
+            width: 1000px;
+        }
+        .tr1{
+            background-color: #a79a9a;
+        }
+        .table2,
+        .tr,
+        .th {
+            font-size: 25px;
+            border: 1px solid black;
+        }
+        .td{
+            width: 173px;
+        }

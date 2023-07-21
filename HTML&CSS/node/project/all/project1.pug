@@ -1,0 +1,70 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title AvinashGYM
+        style 
+            include ../static/style.css
+        script 
+            include ../static/script.js
+    body     
+        div.head#home
+            button#bt(onclick="show()")
+                img#im(src="/static/img/logo.jpg", alt="")
+            ul.head#main(type="none")
+                li #[a(href="/project") Home]
+                li #[a(href="#sec") Service]
+                li #[a(href="#sec2") Detaile]
+                li #[a(href="") Contact us]
+                li#li #[a(href="#sec4") Feedback]
+        section#sec
+            div.md 
+                div.d1 Service 
+                div#d2
+                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab maxime vitae debitis illo harum id fugiat voluptatem.
+                    p Lorem ipsum dolor sit amet consectetur adipisicing.
+        section#sec2 
+            div.md
+                div.d1 Detaile 
+                div.dd2
+                    div
+                        img(src="/static/img/type1.jpg", alt="")
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, soluta hic. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos minus saepe in!
+                    div
+                        img(src="/static/img/type2.jpg", alt="")
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, soluta hic. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos minus saepe in!
+                    div
+                        img(src="/static/img/video.jpg", alt="")
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, soluta hic. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos minus saepe in!                
+        section#sec3 
+            div.md
+                div.sd1 Sponsor 
+                div.sd2
+                    div
+                        img(src="/static/img/images2 (1).png")
+                        img(src="/static/img/1st.png", alt="")
+                        img(src="/static/img/images2 (2).png") 
+                        img(src="/static/img/images3.jpg")     
+                        img(src="/static/img/3-1.png")
+        section#sec4 
+            div.md
+                div.sd1 Feedback
+                form(action='/' method='post')
+                    div.for 
+                        | Name:
+                        input(type='text',name="Name")
+                        | Email:
+                        input(type='text',name="Email")
+                        | Feedback 
+                        textarea(name="Feedback", cols="30", rows="10") 
+                        | More 
+                        textarea(name="More", cols="30", rows="10") 
+                        input(type ="submit" value="submit now")
+        footer#foot Copyright © 2020-2021 AvinashGYM.com
+
+
+          
+
+                        

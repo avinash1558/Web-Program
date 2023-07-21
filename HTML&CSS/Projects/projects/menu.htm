@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .menu-bar {
+            background-color: green;
+            text-align: center;
+        }
+        
+        .menu-bar ul {
+            display: flex;
+            list-style: none;
+            color: #fff;
+        }
+        
+        .menu-bar ul li {
+            width: 120px;
+            margin: 15px;
+            padding: 15px;
+        }
+        
+        .menu-bar ul li a {
+            text-decoration: #fff;
+            color: white;
+        }
+        
+        .menu-bar ul li:hover,
+        .active {
+            background-color: aqua;
+            border-radius: 3px;
+        }
+        
+        .sub-menu-1 {
+            display: none;
+        }
+        
+        .menu-bar ul li:hover .sub-menu-1 {
+            display: block;
+            position: absolute;
+            background-color: aquamarine;
+            margin-left: -15px;
+            margin-top: 15px;
+        }
+        
+        .menu-bar ul li:hover .sub-menu-1 ul {
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        
+        #btn {
+            font-size: 40px;
+            position: fixed;
+            top: 85px;
+            right: 20px;
+            transition: transform 1s ease-in-out;
+        }
+        
+        #btn.active {
+            transform: translateX(-100px);
+        }
+        
+        #menu.active {
+            transform: translateX(0px);
+        }
+        
+        #menu {
+            list-style: none;
+            position: fixed;
+            top: 70px;
+            right: 5px;
+            background-color: blue;
+            height: 100vh;
+            transform: translateX(100%);
+            transition: transform 1s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-bar">
+        <ul>
+            <li class="active"><a href=""> loren1</a></li>
+            <li><a href=""> loren1</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href=""> Lorem.</a></li>
+                        <li><a href=""> Lorem.</a></li>
+                        <li><a href=""> Lorem.</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href=""> loren1</a></li>
+            <li><a href=""> loren1</a></li>
+            <li><a href=""> loren1</a></li>
+            <li><a href=""> loren1</a></li>
+            <li><a href=""> loren1</a></li>
+            <li><a href=""> loren1</a></li>
+        </ul>
+    </div>
+    <div class="body">
+        <button id="btn">≡</button>
+        <ul id="menu">
+            <li class="li">Lorem ipsum dolor</li>
+            <li class="li">Lorem ipsum dolor</li>
+            <li class="li">Lorem ipsum dolor</li>
+        </ul>
+    </div>
+    <script>
+        let btn = document.getElementById('btn')
+        let menu = document.getElementById('menu')
+        btn.addEventListener('click', function() {
+            menu.classList.toggle('active')
+            btn.classList.toggle('active')
+        })
+    </script>
+</body>
+
+</html>

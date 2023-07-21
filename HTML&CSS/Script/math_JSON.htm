@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>math</title>
+</head>
+
+<body>
+    <script>
+        // let d;
+        // document.write('Math.round(12.6) : '+Math.round(12.6) +"<br>");
+        // document.write('Math.pow(12,2) : '+Math.pow(12,2) +"<br>");
+        // document.write('Math.min(4,3,7,12) : '+Math.min(4,3,7,12) +"<br>");
+        // document.write('Math.max(4,3,7,12) : '+Math.max(4,3,7,12) +"<br>")
+        // document.write('Math.sqrt(4) : '+Math.sqrt(4) +"<br>");
+        // document.write('Math.ceil(12.3) : '+Math.ceil(12.3));
+        // let r=Math.random();
+        // document.write("<br>"+'random no. 0 to 1 :'+r);
+        // //random 1 to 10
+        let s = 1;
+        let s1 = 10;
+        //1+(9)*(random 0 to 1)s
+        d = s + (s1 - s) * Math.random();
+        document.write("<br>" + 'random no. 1 to 10 :' + d + "<br>");
+        let p = {
+            name: "avin",
+            sow: "123",
+        };
+        let m = JSON.stringify(p);
+        document.write(m);
+        console.log(m);
+        let k = JSON.parse(m);
+        console.log(k);
+    </script>
+</body>
+
+</html>

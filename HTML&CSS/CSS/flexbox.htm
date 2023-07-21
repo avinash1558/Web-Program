@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        li {
+            color: red;
+            background-color: aqua;
+            height: 113px;
+            width: 113px;
+        }
+        
+        ul {
+            /* height: 2222px; */
+            /* first step of flexbox */
+            display: flex;
+            /* setting flex direction */
+            /* flex-direction: column; */
+            /* flex-direction: raw;  */
+            /* setting flex direction reverse*/
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */
+            /* site wrap */
+            /* flex-wrap: wrap; */
+            /* flex-wrap: wrap-reverse; */
+            /* both wrap and direction */
+            flex-flow: row wrap;
+            /* use for centering in right and left */
+            justify-content: center;
+            /* justify-content: space-around; */
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly;  */
+            /* use for centering in top and bootom */
+            /* with space in next line */
+            /* align-self: center; */
+            /* align-self: flex-end; */
+            /* align-self: flex-start; */
+            /* without space in next line */
+            /* align-content: center; */
+            /* align-content: flex-end; */
+            /* align-content: flex-start; */
+        }
+        
+        ul {
+            /* text and items position*/
+            align-items: center;
+            /* align-items: flex-end; */
+            /* align-items: flex-start; */
+            /* height: 43px; */
+        }
+        
+        #p1 {
+            color: red;
+            background-color: aqua;
+            /* growing any box*/
+            /* flex-grow: 2; */
+            /* shrinking any box*/
+            /* flex-shrink: 2; */
+            /* heigth and weight any box*/
+            /* row --weigth and column --height */
+            /* flex-basis: 123px; */
+            /* both growing and shrinking and basis*/
+            /* flex: grow  shrink  basis; */
+            /* flex: 2 2 234px ; */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul type="none">
+            <li id="p1">home1</li>
+            <li id="p2">home2</li>
+            <li id="p3">home3</li>
+            <li id="p4">home4</li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+// console.assert(12>14,"itis error")
+// console.time("it start")
+console.error('i am error')
+console.warn(' do not teach')
+// console.timeEnd('it isend ')

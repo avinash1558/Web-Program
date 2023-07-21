@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" media="screen and (max-width: 500px)" href="avi.css"> -->
+    <title>Grid</title>
+    <style>
+        .s {
+            border: 2px solid red;
+            background-color: rosybrown;
+        }
+        /* rem -is depend on html size and multiple of this like 2rem =2*html size*/
+        /* em -is depend on perant size and multiple of this like 2em =2*perant size */
+        /* vh - total height portion like 18vh =total height * 18%  */
+        /* vw - total weight portion like 18vh =total weight * 18%  */
+        
+        .h {
+            /* first */
+            display: grid;
+            /* column bais */
+            /* grid-template-columns: 1fr 2fr 3fr; */
+            /* row bais */
+            /* portion in percent */
+            /* grid-template-rows: 1fr 2fr 3fr; */
+            /* grid-template-columns:360px 400px 350px ; */
+            /* grid-template-columns:repeat(auto-fit,minmax(500px,1fr)) ; */
+            /* auto generate column whit weight is 2fr */
+            /* grid-auto-columns: 2fr; */
+            /* grid-template-columns:360px auto 350px ; */
+            /* grid-template-columns:repeat(3,300px); */
+            /* 360px 400px 350px  */
+            /* grid gap */
+            /* grid-row-gap: 2rem; */
+            /* grid-column-gap: 14rem; */
+            /* grid-gap: 100px 122px ; */
+            /* column spanning */
+            /* grid-row: 1/span 2; */
+            /* grid-column-start: 1;
+            grid-column-end: 2; */
+            grid-gap: 100px;
+            /* second for area grid */
+            grid-template-areas: /* 'h1 h2 h3' */
+            'h1' 'h2' 'h3';
+        }
+        
+        #h1 {
+            /* first for area grid */
+            grid-area: h1;
+        }
+        
+        #h2 {
+            grid-area: h2;
+        }
+        
+        #h3 {
+            grid-area: h3;
+        }
+        /* @media (max-width:500px) {
+            .h {
+                grid-template-areas:
+                    'h1 h2 h3';
+            }
+
+            .s {
+                border: 2px solid rgba(255, 0, 0, 0.062);
+                background-color: rgb(143, 188, 143);
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="h">
+        <h1 class="s" id="h1">Lorem ipsum dolor sit amet.</h1>
+        <h2 class="s" id="h2">Lorem ipsum dolor sit amet.</h2>
+        <h3 class="s" id="h3">Lorem ipsum dolor sit amet.</h3>
+    </div>
+</body>
+
+</html>

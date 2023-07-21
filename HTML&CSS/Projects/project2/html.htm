@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <div id="menu">
+        <h1 id="home">Library</h1>
+        <input id="search" type="text" name="search" placeholder="search now...">
+        <button id='search_bt' class="search_bt">search</button>
+    </div>
+
+    <div id='section'>
+        <div id="section1">
+            <h2 id="message"></h2>
+            <hr>
+            <h1 id="welcome1">Library </h1>
+            <hr>
+            <div class="sub_section">
+                <form action="" id="form">
+                    <p>Add Book</p>
+                    <textarea name="node" id="addBook" class="input" cols="30" rows="2"></textarea>
+                    <p>Add Author</p>
+                    <textarea name="node" id="addAuthre" class="input" cols="30" rows="10"></textarea>
+                    <table id='table1'>
+                        <tr>
+                            <td class="typeTd">Type of book:</td>
+                            <td class="typeTd  TypeTd">
+                                <input type="radio" name="type " class="type" id="Java" value="Java" >Java
+                                <br>
+                                <input type="radio" name="type " class="type" id="Pyhton"  value="Python" checked>Python
+                                <br>
+                                <input type="radio" name="type " class="type" id="Program" value="Program" >Program
+                            </td>
+                        </tr>
+                    </table>
+                    <input class="input_save" id="addbtn" type="submit" value="submit now">
+                </form>
+            </div>
+        </div>
+
+        <div id="section2">
+            <hr>
+            <h1 id="welcome2">Details</h1>
+            <hr>
+
+            <table class="table2" cellspacing="0">
+                <tbody class="tbody">
+                    <tr class="tr tr1">
+                        <th class="th th1">Index no.</th>
+                        <th class="th th2">Book Name</th>
+                        <th class="th th3">Author</th>
+                        <th class="th th4">Type</th>
+                        <th class="th th5">Delete</th>
+                    </tr>
+                </tbody>
+                <tbody class="tbody" id="tablebody">
+                    
+                </tbody>
+                
+            </table>
+            </table>
+        </div>
+    </div>
+    <!-- <script src="java.js"></script> -->
+    <script src="new.js"></script>
+</body>
+
+</html>

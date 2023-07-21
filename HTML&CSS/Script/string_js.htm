@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String in Java Script</title>
+</head>
+<body>
+    <script>
+        var str1='"avinashhna"';
+        var str2="SHA'r'ma";
+        var n="       naa         "
+        // adding two string
+        var name=str1.concat(str2);
+        document.write(str1+" is good");
+        // document.write(str1.length);
+        // document.write(str1+str2);
+        document.write(name);
+        document.write(str1.toUpperCase()+str2.toLowerCase());
+        // position of 1st na 
+        document.write(str1.indexOf("na"));
+        // position of last na 
+        document.write(str1.lastIndexOf("na"));
+        //slicing string
+        document.write(str1.slice(3,4));
+        //substr(position,which time)
+        document.write(str1.substr(3,5));
+        document.write(n);
+        // it is use for remove white space of last and first
+        document.write(n.trim()+"<br>");
+        document.write(str2.replace(str1));
+        console.log(`${str1}`)
+
+    </script>
+</body>
+</html>

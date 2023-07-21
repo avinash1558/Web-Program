@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+    <style>
+        div{
+        width: 350px;
+        height: 50px;
+        background-color: cadetblue;
+        border-top: 2px solid green;
+        border-left: 2px solid rgb(126, 128, 0);
+        border-bottom:2px solid pink;
+        border-right: 2px solid red;
+        text-align: center;
+        margin:20px auto;
+        border-top-left-radius:12px ;
+        border-top-right-radius:12px ;
+        border-bottom-left-radius :30px ;
+        border-bottom-right-radius: 12px ;
+    }
+</style>
+
+<body>
+    <div id="clock"></div>
+    <script>
+        //create clock
+        let c = document.getElementById('clock');
+        function clock() {
+            c.innerHTML = new Date();
+            // c.innerHTML = newDate.getTime();
+        }
+        setInterval(clock, 1000);
+        // let c = document.getElementById('clock');
+        //give date
+        //new Date("year,month,date ,hours,minute,second,msecond");
+        // let a=new Date("2021-05-17");
+        // let a = new Date("2021,05,17");
+        // document.write(a);
+        // let b = newDate.getFullYear();
+        // console.log(b);
+        // let t = newDate.getDate();
+        // console.log(t);
+        // let s = newDate.getTime();
+        // console.log(s);
+        //set time
+        let b = newDate.setFullYear(4);
+        console.log(b);
+        let t = newDate.setDate(4);
+        console.log(t);
+        let s = newDate.setTime(4);
+        console.log(s);
+
+    </script>
+</body>
+
+</html>

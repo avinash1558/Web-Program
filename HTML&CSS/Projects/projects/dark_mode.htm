@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            color: rgb(161, 78, 78);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        body.dark{
+            background-color: black;
+            color: white;
+            transition: background 0.5s linear;
+        }
+        body.dark label{
+            background-color: rgb(243, 236, 236);
+           
+        }
+        label{
+            user-select: none;
+            background-color: violet;
+            border-radius: 50%;
+            /* display:inline-block; */
+            display:block;
+            width: 50px;
+            height: 50px;
+        }
+        .mane{
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+        input{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+   <div class="mane">
+       <input type="checkbox" id="change" name="check"><label for="change"></label>
+   </div>
+    <h1>Lorem ipsum dolor sit.</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum asperiores, unde dolores ipsum deleniti ipsa fuga, eum numquam pariatur blanditiis, suscipit quam. Officiis repellat doloribus dolorum exercitationem, accusamus doloremque cumque?</p>
+    <script>
+        let Change=document.getElementById('change')
+        Change.addEventListener('change',function (e) {
+            document.body.classList.toggle('dark',e.target.checked)
+            // document.body.classList.toggle('dark')
+        })
+    </script>
+</body>
+
+</html>

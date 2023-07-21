@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake game</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        #body {
+            min-height: 100vh;
+            min-width: 100vw;
+            background-image: url("../audio/background.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #board {
+            border-radius: 6px;
+            background: linear-gradient(green, yellow);
+            border: 1px solid rgb(27, 26, 26);
+            min-height: 90vmin;
+            min-width: 92vmin;
+            display: grid;
+            grid-template-rows: repeat(18, 1fr);
+            grid-template-columns: repeat(18, 1fr);
+        }
+
+        .player {
+            background: linear-gradient(red, blue);
+            border: 1px solid rgb(14, 6, 6);
+            border-radius: 6px;
+        }
+
+        .playerTell {
+            background: linear-gradient(rgb(133, 99, 99), rgb(162, 162, 235));
+            border: 1px solid rgb(250, 247, 247);
+            border-radius: 12px;
+        }
+
+        .food {
+            background: rgb(153, 50, 122);
+            border: 1px solid rgb(27, 26, 26);
+            border-radius: 8px;
+        }
+
+        #scoreBox {
+            position: absolute;
+            font-size: 30px;
+            top: 48px;
+            right: 200px
+        }
+
+        #hiscoreBox {
+
+            position: absolute;
+            font-size: 30px;
+            top: 78px;
+            right: 200px
+        }
+    </style>
+</head>
+
+<body>
+    <div id="body">
+        <div id="scoreBox">Score: 0</div>
+        <div id="hiscoreBox">HiScore: 0</div>
+        <div id="board"></div>
+    </div>
+    <script>
+        // sound
+        const hit = new Audio('hit.wav');
+        const point = new Audio('point.wav');
+        const moveSound = new Audio('swoosh.wav');
+        // food position
+        let a = 2;
+        let b = 16;
+        let foodList = { x: Math.round(a + (b - a) * Math.random()), y: Math.round(a + (b - a) * Math.random()) };
+        //direction of player
+        let playerArr = [{ x: Math.round(a + (b - a) * Math.random()), y: Math.round(a + (b - a) * Math.random()) }];
+        // let playerArr = [{ x: 12, y: 13 }];
+        let direction = { x: 0, y: 0 };
+
+        // speed of player
+        let speed = 0.25;
+        let fps = 0;
+        let score = 0;
+        // get the html tag with id
+        let board = document.getElementById('board');
+        let body = document.getElementById('body');
+        let hiscoreval;
+        let hiscore = localStorage.getItem("hiscore");
+        if (hiscore === null) {
+            hiscoreval = 0;
+            localStorage.setItem("hiscore", JSON.stringify(hiscoreval))
+        }
+        else {
+            hiscoreval = JSON.parse(hiscore);
+            hiscoreBox.innerHTML = "HiScore: " + hiscore;
+        }
+        function main(ctime) {
+            window.requestAnimationFrame(main);
+            // control fps 
+            if ((ctime - fps) / 1000 < speed) {
+                return;
+            }
+            fps = ctime;
+            console.log(ctime)
+            gameLoop();
+        }
+        function crash(player) {
+            // crash to yourself
+            for (let i = 2; i < playerArr.length; i++) {
+                if (player[i].x === player[0].x && player[i].y === player[0].y) {
+                    hit.play();
+
+                    return true;
+                }
+            }
+            // crash to board
+            if (player[0].x >= 18 || player[0].x <= 0 || player[0].y >= 18 || player[0].y <= 0) {
+                hit.play();
+
+                return true;
+            }
+            return false;
+        }
+        function gameLoop() {
+            // crashing of player
+            if (crash(playerArr)) {
+                alert("Game Over, Press any key")
+                direction = { x: 0, y: 0 };
+                playerArr = [{ x: Math.round(a + (b - a) * Math.random()), y: Math.round(a + (b - a) * Math.random()) }];
+                // playerArr = [{ x: 12, y: 13 }];
+                score = 0
+            }
+            // food eat by player
+            if (playerArr[0].x === foodList.x && playerArr[0].y === foodList.y) {
+                point.play()
+                score += 1;
+                if (score > hiscoreval) {
+                    hiscoreval = score;
+                    localStorage.setItem("hiscore", JSON.stringify(hiscoreval));
+                    hiscoreBox.innerHTML = "HiScore: " + hiscoreval;
+                }
+                scoreBox.innerHTML = "Score: " + score;
+
+                playerArr.unshift({ x: playerArr[0].x + direction.x, y: playerArr[0].y + direction.y });
+                //     
+                foodList = { x: Math.round(a + (b - a) * Math.random()), y: Math.round(a + (b - a) * Math.random()) }
+            }
+
+            // moving player
+            for (let i = playerArr.length - 2; i >= 0; i--) {
+                playerArr[i + 1] = { ...playerArr[i] };
+            }
+            // moveSound.play()
+            playerArr[0].x += direction.x;
+            playerArr[0].y += direction.y;
+
+            // display player
+            board.innerHTML = "";
+            playerArr.forEach((e, i) => {
+                let player = document.createElement('div');
+                player.style.gridRowStart = e.x;
+                player.style.gridColumnStart = e.y;
+                if (i === 0) {
+                    player.classList.add('player');
+                }
+                else {
+                    player.classList.add('playerTell');
+                }
+                board.appendChild(player);
+
+            })
+            // display food
+            let food = document.createElement('div');
+            food.style.gridRowStart = foodList.x;
+            food.style.gridColumnStart = foodList.y;
+            food.classList.add('food');
+            board.appendChild(food);
+
+        }
+
+        window.requestAnimationFrame(main);
+        // controls of player
+        window.addEventListener('keydown', e => {
+            // direction = { x: 0, y: 1 };
+            switch (e.key) {
+                case 'w':
+                    console.log("ArrowUp");
+                    direction.x = -1;
+                    direction.y = 0;
+                    break;
+
+                case 'z':
+                    console.log("ArrowDown");
+
+                    direction.x = 1;
+                    direction.y = 0;
+                    break;
+
+                case 'a':
+                    console.log("ArrowLeft");
+                    direction.x = 0;
+                    direction.y = -1;
+
+                    break;
+
+                case 's':
+                    console.log("ArrowRight");
+                    direction.x = 0;
+                    direction.y = 1;
+
+                    break;
+
+                default:
+                    break;
+            }
+        })
+    </script>
+</body>
+
+</html>

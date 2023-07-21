@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation and varible</title>
+    <style>
+        /* global variable  */
+        
+         :root {
+            /* it is use to create gobal variable */
+            /* --background-color:rgb(212, 193, 196) ; */
+            --color1: rgb(212, 193, 196);
+        }
+        /* .h1{
+            /* creating local varible */
+        /* --color:rgb(58, 223, 16);*/
+        /*  calling variable*/
+        /*color:var(--color); 
+            border-radius: 12px;
+            border: 2px solid rgb(240, 6, 45);
+            background-color:rgb(212, 193, 196) ;
+            height: 123px;
+            width: 123px;   */
+        /* }  */
+        
+        .h {
+            /* it is use to create local variable */
+            --color: blue;
+            color: var(--color);
+            border-radius: 12px;
+            border: 2px solid rgb(240, 6, 45);
+            background-color: var(--color1);
+            height: 123px;
+            width: 123px;
+            /* for animation  */
+            /* first asign position property relative and absulote */
+            position: relative;
+            /* then asign animation */
+            /* give animation name */
+            /* animation-name: avinash ; */
+            /* give duration(playing) to the animation */
+            /* animation-duration: 4s; */
+            /* control animation speed */
+            /* animation-timing-function: ease-in;
+            animation-timing-function: ease-in-out;
+            animation-timing-function: ease-out;  */
+            /* delay for animation */
+            /* animation-delay: 1s; */
+            /* repeatation of animation */
+            /* animation-iteration-count:5; */
+            /* animation-fill-mode:forwards ;
+            animation-fill-mode:backwards ;  */
+            /* all animation combine in one */
+            /* animation:name duration timing-function delay iteration */
+            animation: avi 3s ease-in 1s 3;
+        }
+        
+        @keyframes avi {
+            /* 
+            from{
+
+            }
+            to{
+                
+            }
+             */
+            0% {
+                top: 0px;
+                left: 0px;
+            }
+            25% {
+                top: 250px;
+                left: 0px;
+            }
+            75% {
+                left: 100%;
+                top: 250px;
+            }
+            100% {
+                left: 100%;
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="h" id="h1">Lorem, ipsum dolor.
+    </div>
+    <!-- <hi class="h1">Lorem, ipsum dolor.</hi>
+    <hi class="h1">Lorem, ipsum dolor.</hi>
+    <hi class="h1">Lorem, ipsum dolor.</hi>
+    <hi class="h1">Lorem, ipsum dolor.</hi> -->
+</body>
+
+</html>
